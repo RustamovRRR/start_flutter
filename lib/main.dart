@@ -13,11 +13,20 @@ class MyApp extends StatelessWidget {
           colorScheme:
               ColorScheme.fromSwatch().copyWith(secondary: Colors.red)),
       home: Scaffold(
+        backgroundColor: Colors.amber,
         appBar: AppBar(
           title: Text("First App"),
         ),
-        body: Text("Hello World",
-            style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold)),
+        body: Container(
+          alignment: Alignment.center,
+          color: Colors.purple,
+          child: Text(
+            "John Doe",
+            textAlign: TextAlign.center,
+          ),
+          constraints: BoxConstraints(
+              minHeight: 100, minWidth: 100, maxHeight: 300, maxWidth: 300),
+        ),
         floatingActionButton: FloatingActionButton(
           onPressed: () {},
           child: Icon(Icons.account_balance_sharp),
