@@ -18,15 +18,18 @@ class MyApp extends StatelessWidget {
           title: Text("First App"),
         ),
         body: Container(
-          alignment: Alignment.center,
+          // alignment: Alignment.center,
           color: Colors.purple,
+          width: 200,
+          height: 600,
           child: Text(
             "John Doe",
             textAlign: TextAlign.center,
           ),
-          constraints: BoxConstraints(
-              minHeight: 100, minWidth: 100, maxHeight: 300, maxWidth: 300),
-          margin: EdgeInsets.all(10),
+          // constraints: BoxConstraints(
+          //     minHeight: 100, minWidth: 100, maxHeight: 300, maxWidth: 300),
+          margin: EdgeInsets.symmetric(horizontal: 20, vertical: 50),
+          padding: EdgeInsets.all(60),
         ),
         floatingActionButton: FloatingActionButton(
           onPressed: () {},
