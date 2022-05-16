@@ -26,6 +26,7 @@ class MyApp extends StatelessWidget {
           ),
           constraints: BoxConstraints(
               minHeight: 100, minWidth: 100, maxHeight: 300, maxWidth: 300),
+          margin: EdgeInsets.all(10),
         ),
         floatingActionButton: FloatingActionButton(
           onPressed: () {},
