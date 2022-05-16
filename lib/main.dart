@@ -20,11 +20,13 @@ class MyApp extends StatelessWidget {
         ),
         body: Container(
           color: Colors.teal.shade100,
-          height: 400,
-          child: Row(
-            mainAxisSize: MainAxisSize.max,
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            crossAxisAlignment: CrossAxisAlignment.center,
+          // height: 400,
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            // mainAxisSize: MainAxisSize.max,
+            // mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            // crossAxisAlignment: CrossAxisAlignment.center,
             children: <Widget>[
               Icon(
                 Icons.add_circle,
@@ -54,6 +56,43 @@ class MyApp extends StatelessWidget {
           child: Icon(Icons.account_balance_sharp),
         ),
       ),
+    );
+  }
+}
+
+class RowExample extends StatelessWidget {
+  const RowExample({
+    Key? key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      mainAxisSize: MainAxisSize.max,
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      crossAxisAlignment: CrossAxisAlignment.center,
+      children: <Widget>[
+        Icon(
+          Icons.add_circle,
+          size: 64,
+          color: Colors.green,
+        ),
+        Icon(
+          Icons.add_circle,
+          size: 64,
+          color: Colors.orange,
+        ),
+        Icon(
+          Icons.add_circle,
+          size: 64,
+          color: Colors.red,
+        ),
+        Icon(
+          Icons.add_circle,
+          size: 64,
+          color: Colors.yellow,
+        ),
+      ],
     );
   }
 }
