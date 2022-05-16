@@ -5,6 +5,8 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
+  String _img =
+      "https://besthqwallpapers.com/Uploads/3-7-2019/98955/thumb2-flag-of-germany-concrete-texture-stone-background-germany-flag-europe.jpg";
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -18,18 +20,30 @@ class MyApp extends StatelessWidget {
         ),
         body: Center(
           child: Container(
-            color: Colors.red,
-            width: 300,
-            height: 300,
-            // alignment: Alignment.center,
-            child: Container(
-              alignment: Alignment.center,
-              color: Color.fromARGB(255, 11, 118, 206),
-              width: 100,
-              height: 100,
-              margin: EdgeInsets.all(20),
-              child: Text('Test'),
+            padding: EdgeInsets.all(20),
+            child: Text(
+              'Germany',
+              style: TextStyle(fontSize: 36),
             ),
+            decoration: BoxDecoration(
+                color: Colors.amberAccent,
+                shape: BoxShape.rectangle,
+                border: Border.all(
+                    color: Colors.brown, style: BorderStyle.solid, width: 4),
+                borderRadius: BorderRadius.only(
+                    topLeft: Radius.circular(20),
+                    bottomRight: Radius.circular(20)),
+                image: DecorationImage(
+                  image: NetworkImage(_img),
+                  fit: BoxFit.cover,
+                ),
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.grey,
+                    offset: Offset(20, 30),
+                    blurRadius: 10,
+                  )
+                ]),
           ),
         ),
         floatingActionButton: FloatingActionButton(
