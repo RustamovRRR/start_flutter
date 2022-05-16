@@ -13,23 +13,24 @@ class MyApp extends StatelessWidget {
           colorScheme:
               ColorScheme.fromSwatch().copyWith(secondary: Colors.red)),
       home: Scaffold(
-        backgroundColor: Colors.amber,
         appBar: AppBar(
           title: Text("First App"),
         ),
-        body: Container(
-          // alignment: Alignment.center,
-          color: Colors.purple,
-          width: 200,
-          height: 600,
-          child: Text(
-            "John Doe",
-            textAlign: TextAlign.center,
+        body: Center(
+          child: Container(
+            color: Colors.red,
+            width: 300,
+            height: 300,
+            // alignment: Alignment.center,
+            child: Container(
+              alignment: Alignment.center,
+              color: Color.fromARGB(255, 11, 118, 206),
+              width: 100,
+              height: 100,
+              margin: EdgeInsets.all(20),
+              child: Text('Test'),
+            ),
           ),
-          // constraints: BoxConstraints(
-          //     minHeight: 100, minWidth: 100, maxHeight: 300, maxWidth: 300),
-          margin: EdgeInsets.symmetric(horizontal: 20, vertical: 50),
-          padding: EdgeInsets.all(60),
         ),
         floatingActionButton: FloatingActionButton(
           onPressed: () {},
