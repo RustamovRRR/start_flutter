@@ -21,34 +21,13 @@ class MyApp extends StatelessWidget {
         body: Container(
           color: Colors.teal.shade100,
           // height: 400,
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            crossAxisAlignment: CrossAxisAlignment.stretch,
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            // crossAxisAlignment: CrossAxisAlignment.stretch,
             // mainAxisSize: MainAxisSize.max,
             // mainAxisAlignment: MainAxisAlignment.spaceBetween,
             // crossAxisAlignment: CrossAxisAlignment.center,
-            children: <Widget>[
-              Icon(
-                Icons.add_circle,
-                size: 64,
-                color: Colors.green,
-              ),
-              Icon(
-                Icons.add_circle,
-                size: 64,
-                color: Colors.orange,
-              ),
-              Icon(
-                Icons.add_circle,
-                size: 64,
-                color: Colors.red,
-              ),
-              Icon(
-                Icons.add_circle,
-                size: 64,
-                color: Colors.yellow,
-              ),
-            ],
+            children: expandedContainerler,
           ),
         ),
         floatingActionButton: FloatingActionButton(
@@ -58,6 +37,75 @@ class MyApp extends StatelessWidget {
       ),
     );
   }
+
+  List<Widget> get containerler {
+    return [
+      Container(
+        color: Colors.red,
+        width: 75,
+        height: 75,
+      ),
+      Container(
+        color: Colors.orange,
+        width: 75,
+        height: 75,
+      ),
+      Container(
+        color: Colors.blue,
+        width: 75,
+        height: 75,
+      ),
+      Container(
+        color: Colors.brown,
+        width: 75,
+        height: 75,
+      ),
+      Container(
+        color: Colors.blue,
+        width: 75,
+        height: 75,
+      ),
+      Container(
+        color: Colors.brown,
+        width: 75,
+        height: 75,
+      ),
+    ];
+  }
+}
+
+List<Widget> get expandedContainerler {
+  return [
+    Expanded(
+      flex: 2,
+      child: Container(
+        color: Colors.red,
+        width: 75,
+        height: 75,
+      ),
+    ),
+    Expanded(
+      child: Container(
+        color: Colors.orange,
+        width: 75,
+        height: 75,
+      ),
+    ),
+    Expanded(
+      child: Container(
+        color: Colors.blue,
+        width: 75,
+        height: 75,
+      ),
+    ),
+    Expanded(
+      child: Container(
+        color: Colors.brown,
+        width: 75,
+        height: 75,
+      ),
+    ),
+  ];
 }
 
 class RowExample extends StatelessWidget {
