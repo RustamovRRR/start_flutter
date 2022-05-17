@@ -27,7 +27,7 @@ class MyApp extends StatelessWidget {
             // mainAxisSize: MainAxisSize.max,
             // mainAxisAlignment: MainAxisAlignment.spaceBetween,
             // crossAxisAlignment: CrossAxisAlignment.center,
-            children: expandedContainerler,
+            children: flexibleContainerler,
           ),
         ),
         floatingActionButton: FloatingActionButton(
@@ -72,6 +72,25 @@ class MyApp extends StatelessWidget {
       ),
     ];
   }
+}
+
+List<Widget> get flexibleContainerler {
+  return [
+    Flexible(
+      child: Container(
+        color: Colors.blue,
+        width: 100,
+        height: 300,
+      ),
+    ),
+    Flexible(
+      child: Container(
+        color: Colors.brown,
+        width: 300,
+        height: 300,
+      ),
+    ),
+  ];
 }
 
 List<Widget> get expandedContainerler {
