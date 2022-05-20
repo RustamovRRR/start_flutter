@@ -19,15 +19,163 @@ class MyApp extends StatelessWidget {
           title: Text("First App"),
         ),
         body: Container(
-          color: Colors.teal.shade100,
-          // height: 400,
-          child: Row(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            // crossAxisAlignment: CrossAxisAlignment.stretch,
-            // mainAxisSize: MainAxisSize.max,
-            // mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            // crossAxisAlignment: CrossAxisAlignment.center,
-            children: flexibleContainerler,
+            children: [
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Flexible(
+                    child: Container(
+                      height: 75,
+                      width: 75,
+                      margin: EdgeInsets.all(5),
+                      color: Colors.amber.shade100,
+                      alignment: Alignment.center,
+                      child: Text(
+                        "D",
+                        style: TextStyle(
+                            fontSize: 24, fontWeight: FontWeight.bold),
+                      ),
+                    ),
+                  ),
+                  Flexible(
+                    child: Container(
+                      height: 75,
+                      width: 75,
+                      margin: EdgeInsets.all(5),
+                      color: Colors.amber.shade200,
+                      alignment: Alignment.center,
+                      child: Text(
+                        "A",
+                        style: TextStyle(
+                            fontSize: 24, fontWeight: FontWeight.bold),
+                      ),
+                    ),
+                  ),
+                  Flexible(
+                    child: Container(
+                      height: 75,
+                      width: 75,
+                      margin: EdgeInsets.all(5),
+                      color: Colors.amber.shade400,
+                      alignment: Alignment.center,
+                      child: Text(
+                        "R",
+                        style: TextStyle(
+                            fontSize: 24, fontWeight: FontWeight.bold),
+                      ),
+                    ),
+                  ),
+                  Flexible(
+                    child: Container(
+                      height: 75,
+                      width: 75,
+                      margin: EdgeInsets.all(5),
+                      color: Colors.amber.shade800,
+                      alignment: Alignment.center,
+                      child: Text(
+                        "T",
+                        style: TextStyle(
+                            fontSize: 24, fontWeight: FontWeight.bold),
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+              Flexible(
+                child: Container(
+                  height: 75,
+                  width: 75,
+                  margin: EdgeInsets.all(5),
+                  color: Colors.amber.shade200,
+                  alignment: Alignment.center,
+                  child: Text(
+                    "E",
+                    style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+                  ),
+                ),
+              ),
+              Flexible(
+                child: Container(
+                  height: 75,
+                  width: 75,
+                  margin: EdgeInsets.all(5),
+                  color: Colors.amber.shade300,
+                  alignment: Alignment.center,
+                  child: Text(
+                    "R",
+                    style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+                  ),
+                ),
+              ),
+              Flexible(
+                child: Container(
+                  height: 75,
+                  width: 75,
+                  margin: EdgeInsets.all(5),
+                  color: Colors.amber.shade400,
+                  alignment: Alignment.center,
+                  child: Text(
+                    "S",
+                    style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+                  ),
+                ),
+              ),
+              Flexible(
+                child: Container(
+                  height: 75,
+                  width: 75,
+                  margin: EdgeInsets.all(5),
+                  color: Colors.amber.shade500,
+                  alignment: Alignment.center,
+                  child: Text(
+                    "L",
+                    style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+                  ),
+                ),
+              ),
+              Flexible(
+                child: Container(
+                  height: 75,
+                  width: 75,
+                  margin: EdgeInsets.all(5),
+                  color: Colors.amber.shade600,
+                  alignment: Alignment.center,
+                  child: Text(
+                    "E",
+                    style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+                  ),
+                ),
+              ),
+              Flexible(
+                child: Container(
+                  height: 75,
+                  width: 75,
+                  margin: EdgeInsets.all(5),
+                  color: Colors.amber.shade700,
+                  alignment: Alignment.center,
+                  child: Text(
+                    "R",
+                    style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+                  ),
+                ),
+              ),
+              Flexible(
+                child: Container(
+                  height: 75,
+                  width: 75,
+                  margin: EdgeInsets.all(5),
+                  color: Colors.amber.shade800,
+                  alignment: Alignment.center,
+                  child: Text(
+                    "I",
+                    style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+                  ),
+                ),
+              ),
+            ],
           ),
         ),
         floatingActionButton: FloatingActionButton(
@@ -71,6 +219,28 @@ class MyApp extends StatelessWidget {
         height: 75,
       ),
     ];
+  }
+}
+
+class firstFlutterSection extends StatelessWidget {
+  const firstFlutterSection({
+    Key? key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      color: Colors.teal.shade100,
+      // height: 400,
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        // crossAxisAlignment: CrossAxisAlignment.stretch,
+        // mainAxisSize: MainAxisSize.max,
+        // mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        // crossAxisAlignment: CrossAxisAlignment.center,
+        children: flexibleContainerler,
+      ),
+    );
   }
 }
 
