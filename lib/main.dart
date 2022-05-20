@@ -22,160 +22,7 @@ class MyApp extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Flexible(
-                    child: Container(
-                      height: 75,
-                      width: 75,
-                      margin: EdgeInsets.all(5),
-                      color: Colors.amber.shade100,
-                      alignment: Alignment.center,
-                      child: Text(
-                        "D",
-                        style: TextStyle(
-                            fontSize: 24, fontWeight: FontWeight.bold),
-                      ),
-                    ),
-                  ),
-                  Flexible(
-                    child: Container(
-                      height: 75,
-                      width: 75,
-                      margin: EdgeInsets.all(5),
-                      color: Colors.amber.shade200,
-                      alignment: Alignment.center,
-                      child: Text(
-                        "A",
-                        style: TextStyle(
-                            fontSize: 24, fontWeight: FontWeight.bold),
-                      ),
-                    ),
-                  ),
-                  Flexible(
-                    child: Container(
-                      height: 75,
-                      width: 75,
-                      margin: EdgeInsets.all(5),
-                      color: Colors.amber.shade400,
-                      alignment: Alignment.center,
-                      child: Text(
-                        "R",
-                        style: TextStyle(
-                            fontSize: 24, fontWeight: FontWeight.bold),
-                      ),
-                    ),
-                  ),
-                  Flexible(
-                    child: Container(
-                      height: 75,
-                      width: 75,
-                      margin: EdgeInsets.all(5),
-                      color: Colors.amber.shade800,
-                      alignment: Alignment.center,
-                      child: Text(
-                        "T",
-                        style: TextStyle(
-                            fontSize: 24, fontWeight: FontWeight.bold),
-                      ),
-                    ),
-                  ),
-                ],
-              ),
-              Flexible(
-                child: Container(
-                  height: 75,
-                  width: 75,
-                  margin: EdgeInsets.all(5),
-                  color: Colors.amber.shade200,
-                  alignment: Alignment.center,
-                  child: Text(
-                    "E",
-                    style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
-                  ),
-                ),
-              ),
-              Flexible(
-                child: Container(
-                  height: 75,
-                  width: 75,
-                  margin: EdgeInsets.all(5),
-                  color: Colors.amber.shade300,
-                  alignment: Alignment.center,
-                  child: Text(
-                    "R",
-                    style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
-                  ),
-                ),
-              ),
-              Flexible(
-                child: Container(
-                  height: 75,
-                  width: 75,
-                  margin: EdgeInsets.all(5),
-                  color: Colors.amber.shade400,
-                  alignment: Alignment.center,
-                  child: Text(
-                    "S",
-                    style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
-                  ),
-                ),
-              ),
-              Flexible(
-                child: Container(
-                  height: 75,
-                  width: 75,
-                  margin: EdgeInsets.all(5),
-                  color: Colors.amber.shade500,
-                  alignment: Alignment.center,
-                  child: Text(
-                    "L",
-                    style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
-                  ),
-                ),
-              ),
-              Flexible(
-                child: Container(
-                  height: 75,
-                  width: 75,
-                  margin: EdgeInsets.all(5),
-                  color: Colors.amber.shade600,
-                  alignment: Alignment.center,
-                  child: Text(
-                    "E",
-                    style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
-                  ),
-                ),
-              ),
-              Flexible(
-                child: Container(
-                  height: 75,
-                  width: 75,
-                  margin: EdgeInsets.all(5),
-                  color: Colors.amber.shade700,
-                  alignment: Alignment.center,
-                  child: Text(
-                    "R",
-                    style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
-                  ),
-                ),
-              ),
-              Flexible(
-                child: Container(
-                  height: 75,
-                  width: 75,
-                  margin: EdgeInsets.all(5),
-                  color: Colors.amber.shade800,
-                  alignment: Alignment.center,
-                  child: Text(
-                    "I",
-                    style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
-                  ),
-                ),
-              ),
-            ],
+            children: [RowWidgetYarat(), ColumnYarat()],
           ),
         ),
         floatingActionButton: FloatingActionButton(
@@ -219,6 +66,96 @@ class MyApp extends StatelessWidget {
         height: 75,
       ),
     ];
+  }
+}
+
+class ColumnYarat extends StatelessWidget {
+  const ColumnYarat({
+    Key? key,
+  }) : super(key: key);
+
+  Container containerYarat(String herf, Color reng) {
+    return Container(
+      height: 75,
+      width: 75,
+      margin: EdgeInsets.all(5),
+      color: Colors.amber.shade200,
+      alignment: Alignment.center,
+      child: Text(
+        "E",
+        style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+      ),
+    );
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      children: [
+        Flexible(
+          child: containerYarat('E', Colors.amber.shade200),
+        ),
+        Flexible(
+          child: containerYarat('R', Colors.amber.shade300),
+        ),
+        Flexible(
+          child: containerYarat('S', Colors.amber.shade400),
+        ),
+        Flexible(
+          child: containerYarat('L', Colors.amber.shade500),
+        ),
+        Flexible(
+          child: containerYarat('E', Colors.amber.shade600),
+        ),
+        Flexible(
+          child: containerYarat('R', Colors.amber.shade700),
+        ),
+        Flexible(
+          child: containerYarat('I', Colors.amber.shade900),
+        ),
+      ],
+    );
+  }
+}
+
+class RowWidgetYarat extends StatelessWidget {
+  const RowWidgetYarat({
+    Key? key,
+  }) : super(key: key);
+
+  Container containerYarat(String herf, Color reng) {
+    return Container(
+      height: 75,
+      width: 75,
+      margin: EdgeInsets.all(5),
+      color: reng,
+      alignment: Alignment.center,
+      child: Text(
+        herf,
+        style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+      ),
+    );
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      children: [
+        Flexible(
+          child: containerYarat("D", Colors.amber.shade100),
+        ),
+        Flexible(
+          child: containerYarat("A", Colors.amber.shade200),
+        ),
+        Flexible(
+          child: containerYarat("R", Colors.amber.shade400),
+        ),
+        Flexible(
+          child: containerYarat("T", Colors.amber.shade800),
+        ),
+      ],
+    );
   }
 }
 
